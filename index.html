@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- En-tête de la page -->
+
+        <!-- Metadonnees -->
+        <meta charset="UTF-8">
+        <meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Expires" content="Wed, 30 Dec 2015 20:00:00">
+
+
+        <meta name="Author" lang="fr" content="SDUB">
+        <meta name="Publisher" content="SDUB">
+		<meta name="language" content="fr"/>
+		<meta name="robots" content="index,follow"/>
+        <meta name="Date" content="Fri, 11 jul 2014">
+		<meta name="Description" content="Gagnez un iPhone 5S 16 Go de la couleur de votre choix ou un chèque de 700€ en vous inscrivant au concours iphonecash.net.">
+		<meta name="keywords" content="jeux concours, concours gratuits, jeux gratuits, jeux, jeu, concours, gagner, gagner cadeaux, iPhone, iphone, kdos, kdo, gagner iphone, gagner smartphone"/>
+		
+		<!-- icone du site web -->
+		<link rel="icon" type="image/ico" href="./img/kdo.ico"/>
+
+        <!-- import de scripts -->
+        <link rel="stylesheet" href="web/css/style.css" />
+    	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
+		<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+		<script src="web/js/jquery.prettySocial.min.js"></script>
+		<script src="./web/js/validate.js" type="text/javascript"></script>
+        <title>iPhoneCash.net</title>
+    </head>
+
+    <body>
+    	<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
+
+		<div id="page-content">
+			<div id="photo">
+				<img src="img/iphone5.png" alt="Gagnez votre l\'iPhone 5s de votre choix" id="img"/>
+				<img src="img/cash.png" alt="Gagnez 700\€" id="cash"/>
+			</div>
+            <div id="felicitations">
+    		    <div class="social-container">
+					<div class="links">
+						<a href="#" data-type="twitter" data-url="http://www.iphonecash.net/" data-description="Tentez de gagner un iPhone 5s ou un chèque de 700€ sur " data-via="SylvainPayet" class="prettySocial fa fa-twitter"></a>
+						<a href="#" data-type="facebook" data-url="http://www.iphonecash.net/" data-title="prettySocial - custom social share buttons." data-description="Tentez de gagner un iPhone 5s ou un chèque de 700€!" class="prettySocial fa fa-facebook"></a>
+						<a href="#" data-type="googleplus" data-url="http://www.iphonecash.net/" data-description="Tentez de gagner un iPhone 5s ou un chèque de 700€!" class="prettySocial fa fa-google-plus"></a>
+					</div>
+					<script type="text/javascript" class="source">
+						$('.prettySocial').prettySocial();
+					</script>
+				</div>
+                <div id="message">
+                	<h1 class="title-msg">Gagnez un iPhone 5S 16Go sur iphonecash.net!</h1>
+
+                	<strong>Félicitations</strong>
+
+                	<p>
+						Nous sommes heureux de vous inviter à gagner
+						<strong>un iPhone 5s ou un chèque de 700€</strong>
+						en participant à notre jeu !
+						</br>Le tirage au sort aura lieu le <strong>lundi 15 septembre 2014.</strong>
+					</p>
+					<div id="signature-texte">
+						<span><strong>Sylvain Payet</strong></span></br>
+						<span>Responsable clientèle</span>
+					</div>
+					<hr>
+					<div id="huissier-signature">
+						<img src="img/badge-huissier.png" alt="Garantie sous contrôle d'un huissier" id="badge"/>
+						<p class="huissier">
+							<strong>Maître Antoine</strong></br>
+							<span>Huissier de justice</span>
+						</p>
+					</div>
+                </div>
+            </div>
+            <div id="formulaire">
+                <form class="form-horizontal" id="form" method="post" action="model/save.php" class="inscription" name="myForm" onsubmit="return validateForm()">
+				  <fieldset>
+				    <legend>Tentez de gagner un iPhone 5s ou 700€</legend>
+				    <div class="form-group">
+				      <label for="select" class="col-lg-2 control-label obligatoire">Prix</label>
+				      <div class="col-lg-10">
+				        <select class="form-control" id="select" name="kdo" required="true">
+				          <option selected="true" value="iPhone 5s - Noir">iPhone 5s - Argent</option>
+				          <option value="iPhone 5s - Or">iPhone 5s - Or</option>
+				          <option value="iPhone 5s - Gris sidéral">iPhone 5s - Gris sidéral</option>
+				          <option value="Chèque de 600€">Chèque de 700€</option>
+				        </select>
+				      </div>
+				    </div>
+				    <div class="form-group">
+				      <label for="inputPrenom" class="col-lg-2 control-label obligatoire">Prénom</label>
+				      <div class="col-lg-10">
+				        <input type="text" class="form-control" id="inputPrenom" name="prenom" placeholder="Prénom" required="true" length='50'>
+				      </div>
+				    </div>
+				    <div class="form-group">
+				      <label for="inputNom" class="col-lg-2 control-label obligatoire">Nom</label>
+				      <div class="col-lg-10">
+				        <input type="text" class="form-control" id="inputNom" name="nom" placeholder="Nom" required="true" length='50'>
+				      </div>
+				    </div>
+				    <div class="form-group">
+				      <label for="inputEmail" class="col-lg-2 control-label obligatoire">Email</label>
+				      <div class="col-lg-10">
+				        <input type="email" class="form-control" id="email" name="email" placeholder="Email" required="true" length='100'><span class="info"></span>
+				      </div>
+				    </div>
+				    <div class="form-group">
+				      <label for="tel" class="col-lg-2 control-label obligatoire">Tel</label>
+				      <div class="col-lg-10">
+				        <input type="text" class="form-control" id="tel" name="tel" placeholder="Téléphone" required="true" length='10'><span class="info"></span>
+				        <!-- Vérification de l'existence du numéro -->
+				        <script> 
+							$(document).ready(function(){
+								$("input").focus(function(){ 
+									var info_form=$(this).next(".info"); 
+									info_form.empty(); 
+								});
+
+								$("input").blur(function(){ 
+									var name=($(this).attr("name")); 
+									var value=($(this).attr("value")); 
+									var info_form=$(this).next(".info"); 
+									var ok_tel = true;
+									var ok_email = true;
+									var regexTel = new RegExp(/(\+\d+(\s|-))?\d(\s|-)?(\d{2}(\s|-)?){4}/);
+									var regexMail = new RegExp('^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$', 'i');
+									if(name=="tel") 
+									{ 
+										$.ajax({ 
+											type: "GET", 
+											url: "./model/check-tel.php?tel="+value, 
+											success:function(data){ 
+												if(data==1) 
+												{ 
+													info_form.append("Ce numéro est déjà utilisé"); 
+												} 
+											} 
+										}); 
+										if (!regexTel.test(value) && value!="")
+									    {
+									        info_form.append("Numéro invalide"); 
+									    }
+									}
+									else if(name=="email")
+									{
+										$.ajax({ 
+											type: "GET", 
+											url: "./model/check-email.php?email="+value, 
+											success:function(data){ 
+												if(data==1) 
+												{ 
+													info_form.append("Cet email est déjà utilisé"); 
+												} 
+											} 
+										}); 
+										if (!regexMail.test(value) && value!="")
+									    {
+									        info_form.append("Mail invalide"); 
+									    }
+									}
+								});	
+							});
+						</script> 
+				      </div>
+				    </div>
+				    <div class="form-group">
+				      <label for="inputRue" class="col-lg-2 control-label">Rue</label>
+				      <div class="col-lg-10">
+				        <input type="text" class="form-control" id="inputRue" name="rue" placeholder="Rue" length='255'>
+				      </div>
+				    </div>
+				    <div class="form-group">
+				      <label for="inputCP" class="col-lg-2 control-label">CP</label>
+				      <div class="col-lg-10">
+				        <input type="number" class="form-control" id="inputCP" name="cp" placeholder="Code Postal">
+				      </div>
+				    </div>
+				    <div class="form-group">
+				      <label for="inputVille" class="col-lg-2 control-label">Ville</label>
+				      <div class="col-lg-10">
+				        <input type="text" class="form-control" id="inputVille" name="ville" placeholder="Ville" length='255'>
+				      </div>
+				    </div>
+				    <div class="form-group">
+				      <label class="control-label obligatoire" id="chk_confirm">J'accepte le <a href="infos/cg.html" target="_blank">r&egraveglement</a></label>
+				      <input type="checkbox" required="true">
+				    </div>
+				    <div class="form-group">
+				      <div class="col-lg-10 col-lg-offset-3">
+				        <button type="submit" id="mySubmit" class="btn btn-primary validate">Valider l'inscription</button>
+				      </div>
+				    </div>
+				  </fieldset>
+				</form>
+            </div>
+        </div>
+        
+        <div id="footer">
+        	<hr id="barre">
+        	<a href="infos/cg.html" class="links" target="_blank">Conditions g&eacuten&eacuterales</a>
+		</div>
+    </body>
+</html>
